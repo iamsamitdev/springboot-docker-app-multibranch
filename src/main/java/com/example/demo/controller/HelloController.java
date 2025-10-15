@@ -51,4 +51,30 @@ public class HelloController {
         response.put("description", "A simple Spring Boot application with Docker support.");
         return ResponseEntity.ok(response);
     }
+
+    // เพิ่ม endpoint ใหม่สำหรับทดสอบ
+    @GetMapping("/products")
+    public ResponseEntity<List<Map<String, Object>>> products() {
+        List<Map<String, Object>> products = new ArrayList<>();
+        
+        Map<String, Object> product1 = new HashMap<>();
+        product1.put("id", 1);
+        product1.put("name", "Laptop");
+        product1.put("price", 25000.00);
+        products.add(product1);
+        
+        Map<String, Object> product2 = new HashMap<>();
+        product2.put("id", 2);
+        product2.put("name", "Mouse");
+        product2.put("price", 500.00);
+        products.add(product2);
+        
+        Map<String, Object> product3 = new HashMap<>();
+        product3.put("id", 3);
+        product3.put("name", "Keyboard");
+        product3.put("price", 1200.00);
+        products.add(product3);
+        
+        return ResponseEntity.ok(products);
+    }
 }

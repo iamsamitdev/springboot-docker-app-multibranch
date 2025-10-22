@@ -98,7 +98,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: '21'
-          distribution: 'eclipse-temurin'
+          distribution: 'temurin'
           cache: 'maven'
       
       # Step 4: Run tests and package

@@ -47,7 +47,7 @@ public class HelloController {
     public ResponseEntity<Map<String, String>> info() {
         Map<String, String> response = new HashMap<>();
         response.put("app", "Spring Boot Demo Application");
-        response.put("version", "2.0.0");
+        response.put("version", "3.0.0");
         response.put("description", "A simple Spring Boot application with Docker support.");
         return ResponseEntity.ok(response);
     }
